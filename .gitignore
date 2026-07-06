@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*$py.class
+db.sqlite3
+local_settings.py
+
+postgres_data/
+.env
+
+
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+*.log
+celerybeat-schedule
