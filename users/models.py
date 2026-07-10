@@ -26,7 +26,7 @@ class User(AbstractBaseUser,PermissionsMixin):
         SUPERADMIN='superadmin','Superadmin'
         ADMIN='admin','Admin',
         SELLER='seller','Seller',
-        CUSTOMER='customer','CUSTOMER',
+        CUSTOMER='customer','Customer',
 
     email=models.EmailField(unique=True,max_length=255)
     first_name=models.CharField(max_length=255,blank=True,null=True)
