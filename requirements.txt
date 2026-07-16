@@ -6,3 +6,4 @@ djangorestframework-simplejwt
 redis
 celery
 drf-spectacular
+Pillow==10.3.0

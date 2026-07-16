@@ -45,3 +45,14 @@ class Product(models.Model):
         super().save(*args,**kwargs)            
 
 
+class ProductImage(models.Model):
+    product=models.ForeignKey(Product,on_delete=models.CASCADE,related_name='images')
+    image=models.ImageField(upload_to='products/')
+    ordering=models.PositiveIntegerField(default=0)
+    created_at=models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering=['ordering']
+
+    def __str__(self) -> str:
+        return f'{self.product.name}-{self.ordering}'    
